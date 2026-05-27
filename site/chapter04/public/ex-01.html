@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Web site created using create-react-app" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.
+min.css" rel="stylesheet" integrity="sha384-
+EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+crossorigin="anonymous">
+        <title>React Elements and ReactDOM</title>
+    </head>
+    <body>
+        <!-- Target container -->
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        
+        <!-- Load React and ReactDOM -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+        <!-- Optional: Babel to use JSX -->
+        <script src="https://unpkg.com"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        
+        <script>
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            const dish = React.createElement("h1", { id: "recipe-0" }, "Baked Salmon");
+            const dessert = React.createElement("h2", null, "Coconut Cream Pie");
+
+            const list = 
+                React.createElement("section", { id: "baked-salmon" },
+                    React.createElement("h1", null, "Baked Salmon"),
+                        React.createElement("ul", { className: "ingredients" },
+                            React.createElement("li", null, "2 lb salmon"),
+                            React.createElement("li", null, "5 sprigs fresh rosemary"),
+                            React.createElement("li", null, "2 tablespoons olive oil"),
+                            React.createElement("li", null, "2 small lemons"),
+                            React.createElement("li", null, "1 teaspoon kosher salt"),
+                            React.createElement("li", null, "4 cloves of chopped garlic")
+                        ),
+                React.createElement("section", { className: "instructions" },
+                    React.createElement("h2", null, "Cooking Instructions"),
+                    React.createElement("p", null, "Preheat the oven to 375 degrees."),
+                    React.createElement("p", null, "Lightly coat aluminum foil with oil."),
+                    React.createElement("p", null, "Place salmon on foil."),
+                    React.createElement("p",null,
+                        "Cover with rosemary, sliced lemons, chopped garlic."),
+                    React.createElement("p", null,
+                        "Bake for 15-20 minutes until cooked through."),
+                    React.createElement("p", null, "Remove from oven.")
+                )
+            );
+            console.log(list);
+            
+            root.render(list);
+            
+        </script>
+
+    </body>
+</html>
+
+/***
+ * React Elements
+ * 
+ * React elements are the building blocks of React applications. They are plain JavaScript objects that 
+ * represent a piece of the user interface. React elements describe what you want to see on the screen, 
+ * and React takes care of updating the DOM to match those descriptions.
+ * 
+ * In this example, we create a simple React element that represents a recipe for baked salmon. 
+ * We use the `React.createElement` function to create a nested structure of elements, 
+ * including headings, lists, and paragraphs. The resulting element is then rendered to 
+ * the DOM using `root.render()`.
+ * 
+ * When you run this code in a browser, you will see the recipe for baked salmon displayed on the page. 
+ * The console will also log the structure of the React element we created.
+ */
+
+ /***
+ * React.createElement(
+ *   "ul",
+ *   { className: "ingredients" },
+ *   items.map(ingredient => React.createElement("li", null, ingredient))
+ * );
+ * 
+ * When running this code, you’ll see a console warning about the missing `key` prop.
+ *
+ * To fix this, we need to add a `key` prop to each list item. The `key` prop is a special attribute that
+ * helps React identify which items have changed, are added, or are removed. It should be a unique identifier for each item in the list. In this case, we can use the ingredient name as the key:
+ *
+ * React.createElement(
+ *   "ul",
+ *   { className: "ingredients" },
+ *   items.map(ingredient => React.createElement("li", { key: ingredient }, ingredient))
+ * );
+ *
+ * or,
+ *
+ * React.createElement(
+ *   "ul",
+ *   { className: "ingredients" },
+ *   items.map((ingredient, i) => React.createElement("li", { key: i }, ingredient))
+ * );
+ *   
+ */
