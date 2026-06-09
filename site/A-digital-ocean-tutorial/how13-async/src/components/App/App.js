@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, useReducer, useState } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 const RiverInformation = lazy(() => import(/* webpackChunkName: "RiverInformation" */ '../RiverInformation/RiverInformation'));
 

@@ -1,0 +1,97 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "item": "bread"
+    },
+    {
+      "id": "2",
+      "item": "grapes"
+    },
+    {
+      "item": "rice",
+      "id": "n3VLQoNXlkE"
+    },
+    {
+      "item": "rice",
+      "id": "ZDCBJR9MW98"
+    },
+    {
+      "item": "rice",
+      "id": "W1q_EaJNIL8"
+    },
+    {
+      "item": "rice",
+      "id": "xiFeeDJj0r4"
+    },
+    {
+      "item": "rice",
+      "id": "KYyokezHpFg"
+    },
+    {
+      "item": "rice",
+      "id": "pBFjpFt-RL0"
+    },
+    {
+      "item": "rice",
+      "id": "eJvJhfEvoao"
+    },
+    {
+      "item": "rice",
+      "id": "gltkxYN0_Qo"
+    },
+    {
+      "item": "rice",
+      "id": "IxzTuy2D3Es"
+    },
+    {
+      "item": "rice",
+      "id": "9OIasFs4rDM"
+    },
+    {
+      "item": "kale",
+      "id": "aTJ06OINqgI"
+    },
+    {
+      "item": "",
+      "id": "kIzXyNfkuIQ"
+    },
+    {
+      "item": "kale",
+      "id": "BMh-YHrE9vs"
+    },
+    {
+      "item": "",
+      "id": "OHYmfQJTq_M"
+    },
+    {
+      "item": "potatos",
+      "id": "G_CyeroRADI"
+    },
+    {
+      "item": "",
+      "id": "z9S55BsNC8Y"
+    },
+    {
+      "item": "pepaya",
+      "id": "yAtfjVJmfD4"
+    },
+    {
+      "item": "peanut",
+      "id": "mh2RmXaBKEk"
+    },
+    {
+      "item": "jambu",
+      "id": "pKRf08wxCuo"
+    },
+    {
+      "item": "tomat",
+      "id": "fUgcYRrPL8g"
+    },
+    {
+      "item": "dog treats",
+      "id": "lIIV5hOVSug"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

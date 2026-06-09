@@ -1,5 +1,5 @@
 {
-  "name": "how13-async",
+  "name": "how14-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "api": "json-server db.json -p 3333",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
