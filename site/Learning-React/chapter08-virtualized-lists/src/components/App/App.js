@@ -1,31 +1,31 @@
-import React from 'react';
-import './App.css';
-import BigList from './Fake.js';
-import { FixedSizeList as List } from "react-window";
+import React, { useRef, useState } from "react";
+import GitHubUser from "../GitHubUser/GitHubUser";
+import "./App.css";
 
-function App() {
-  const renderRow = ({ index, style }) => (
-    <div style={{ ...style, ...{ display: "flex" } }}>
-      <img
-        src={BigList[index].avatar}
-        alt={BigList[index].name}
-        width={50}
-      />
-      <p>
-        {BigList[index].name} - {BigList[index].email}
-      </p>
+export default function App() {
+  const [login, setLogin] = useState();
+  const txtSearch = useRef(null);
+
+  return (
+    <div className="App">
+      <form>
+        <input
+          name="txt-search"
+          ref={txtSearch}
+          defaultValue={"moontahoe"}
+          type="text"
+          placeholder="input github user"
+        />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setLogin(txtSearch.current.value);
+          }}
+        >
+          Search
+        </button>
+      </form>
+      <GitHubUser login={login} />
     </div>
   );
-  return (
-    <List
-      height={window.innerHeight}
-      width={window.innerWidth - 20}
-      itemCount={BigList.length}
-      itemSize={50}
-    >
-      {renderRow}
-    </List>
-  );
 }
-
-export default App;
