@@ -1,5 +1,6 @@
 import React from "react";
 import Fetch from "../Fetch/Fetch";
+import UserRepositories from "../App/UserRepositories";
 
 function LoadingSpinner() {
     return <div>Loading...</div>;
@@ -32,6 +33,10 @@ function UserDetails({ data }) {
                 {data.name && <p>{data.name}</p>}
                 {data.location && <p>{data.location}</p>}
             </div>
+            <UserRepositories
+                login={ data.login }
+                onSelect={repoName => console.log(`${repoName} selected`)}
+            />
         </div>
     );
 }
